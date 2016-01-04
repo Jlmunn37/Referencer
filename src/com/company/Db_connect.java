@@ -10,20 +10,21 @@ import java.sql.*;
 /**
  * Created by Andy on 02/01/2016.
  */
-;
 
-public class Db_connect {
 
-       public String connect(String data) {
+public class Db_connect 
+
+{
+
+       public String connect(String data) // TBD 
+
+      {
 
            {
-
-
+           // why do we want this empty? 
            }
            try
-
            {
-
                // connection  variables
                String host2 = "127.0.0.1";
                String user = "root";
@@ -46,10 +47,10 @@ public class Db_connect {
                ResultSet rs =  st.executeQuery(str);
 
 
-              // GET THE STING FROM THE DATABASE // ARGUMENT LOOKS IN COLUMN 2.
+               // GET THE STING FROM THE DATABASE // ARGUMENT LOOKS IN COLUMN 2.
                String name = rs.getString(2);
                // move the value to 2ND ROW TO GE STRING.
-               rs. next();
+               rs.next();
 
                // close the connection to the db
 
@@ -57,24 +58,16 @@ public class Db_connect {
 
                // print to terminal the content of reference table
                System.out.print(str + "your ref");
+           } 
 
-
-           } catch (
-                   SQLException err
-                   )
-
+           catch (SQLException err)
            {
-
                System.out.println(err.getMessage());
-
            }
 
 
-           String data2 = data ;
+           String data2 = data;
            return data2;
-
-       }
-
 
 
 }
